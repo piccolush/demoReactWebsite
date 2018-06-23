@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './CustomNavbar.css'
 // import FacebookLogin from 'react-facebook-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-import Facebook from './facebook';
+// import Facebook from './facebook';
 
 const buttonStyle = {
   marginTop:'10px',
@@ -44,7 +44,7 @@ export default class CustomNavbar extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            {/* <FacebookLogin
+            <FacebookLogin
               appId="232159504040059"
               autoLoad
               callback={this.responseFacebook}
@@ -53,8 +53,8 @@ export default class CustomNavbar extends Component {
                 <button style={buttonStyle} onClick={renderProps.onClick}>Login via Facebook</button> 
                 : <button style={buttonStyle} onClick={renderProps.onClick}>Log Out</button>
               )}
-            /> */}
-            <Facebook onClick={this.props.onClick }/>
+            />
+            {/* <Facebook onClick={this.props.onClick }/> */}
             {/* <div style={{ marginTop: '10px' }} className="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div> */}
             {/* <div style={{ marginTop: '10px' }} className="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="true"></div> */}
             <NavItem eventKey={1} componentClass={Link} href="/" to="/">
